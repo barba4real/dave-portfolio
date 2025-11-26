@@ -1,0 +1,102 @@
+{
+  "name": "Dave Oluwafemi",
+  "title": "Desenvolvedor Full Stack e Diretor Geral",
+  "subtitle": "PHP • Laravel • JavaScript • MySQL • Sistemas Multi-idioma",
+  "location": "Lagos, Nigéria (Aberto a posições remotas globalmente)",
+  "sections": {
+    "summary": {
+      "title": "Resumo Profissional",
+      "content": "Desenvolvedor Full Stack com <strong>7+ anos</strong> de experiência prática construindo aplicações web de nível empresarial, plataformas financeiras, soluções de e-commerce e sistemas comerciais multi-idioma. <strong>Diretor Geral</strong> na Endless Pro Solutions, liderando o desenvolvimento de sistemas digitais avançados incluindo plataformas de microcrédito, sistemas de gestão de correio, dashboards fintech e websites comerciais internacionais suportando <strong>6-18 idiomas</strong> por projeto.<br><br>Especializado em <strong>PHP 8.2+, Laravel, MySQL</strong> e tecnologias web modernas. Experiência comprovada na entrega de aplicações escaláveis, seguras e de alto desempenho para setores bancários, logísticos, e-commerce e infraestrutura empresarial. Sólida experiência em <strong>integrações de API, sistemas de pagamento, rastreamento em tempo real</strong> e soluções <strong>conformes com GDPR</strong>."
+    },
+    "skills": {
+      "title": "Competências Técnicas Principais",
+      "categories": {
+        "backend": {
+          "title": "Desenvolvimento Backend",
+          "skills": "PHP 8.2+, Laravel, MySQL 8.0, APIs RESTful, Microserviços, PDO, Arquitetura MVC, Gestão de Servidores"
+        },
+        "frontend": {
+          "title": "Desenvolvimento Frontend", 
+          "skills": "JavaScript ES6+, Bootstrap 5, jQuery, HTML5, CSS3, Design Responsivo, Implementação UI/UX"
+        },
+        "database": {
+          "title": "Base de Dados e Infraestrutura",
+          "skills": "MySQL, Redis, Design de Base de Dados, Otimização de Consultas, cPanel, Linux, Apache, Nginx"
+        },
+        "security": {
+          "title": "Segurança e Conformidade",
+          "skills": "Autenticação JWT, Proteção CSRF, Encriptação, Conformidade GDPR, Prevenção de Injeção SQL"
+        },
+        "integration": {
+          "title": "Integração e APIs",
+          "skills": "Gateways de Pagamento (Stripe, PayPal), APIs SMS/Email, Integração WhatsApp, APIs de Terceiros"
+        },
+        "tools": {
+          "title": "Ferramentas e Gestão",
+          "skills": "Git, GitHub, Docker, Composer, Gestão de Projetos, SEO, i18n Multi-idioma"
+        }
+      }
+    },
+    "experience": {
+      "title": "Experiência Profissional",
+      "jobs": [
+        {
+          "title": "Diretor Geral e Desenvolvedor Full Stack Principal",
+          "company": "Endless Pro Solutions",
+          "location": "Lagos, Nigéria",
+          "period": "2020 – Presente",
+          "duration": "4+ anos",
+          "responsibilities": [
+            "Liderar equipa de desenvolvimento na criação de <strong>10+ aplicações web empresariais</strong> para clientes internacionais",
+            "Arquitetura e desenvolvimento de sistemas de produção suportando <strong>6-18 idiomas cada</strong>",
+            "Construção de sistemas bancários seguros gerindo transações financeiras sensíveis com <strong>segurança de nível empresarial</strong>",
+            "Desenvolvimento de plataformas de email de alto volume processando <strong>50M+ emails mensalmente</strong>",
+            "Criação de sistemas de rastreamento em tempo real para operações logísticas e de correio",
+            "Implementação de sistemas de gestão de empréstimos <strong>conformes com GDPR</strong> com manuseamento de documentos",
+            "Gestão do ciclo de vida completo do projeto desde recolha de requisitos até implementação em produção",
+            "Integração de gateways de pagamento, APIs SMS/WhatsApp e serviços de terceiros"
+          ]
+        }
+      ]
+    },
+    "projects": {
+      "title": "Portfólio de Projetos Principais",
+      "items": [
+        {
+          "name": "SecureBank Pro - Sistema Bancário Multi-idioma",
+          "year": "2024",
+          "tech": "PHP 8.2+, MySQL, Bootstrap 5, 13 Idiomas, Segurança Empresarial",
+          "description": "Plataforma bancária completa com gestão de contas, transações, consola de administração e suporte multi-idioma para implementação internacional."
+        }
+      ]
+    },
+    "education": {
+      "title": "Educação e Desenvolvimento Profissional",
+      "items": [
+        {
+          "degree": "OND - Engenharia Elétrica/Eletrónica",
+          "institution": "Osun State College of Technology, Esa-Oke",
+          "period": "2003 – 2005"
+        }
+      ]
+    },
+    "additional": {
+      "title": "Idiomas e Informações Adicionais",
+      "languages": "Idiomas:",
+      "languageItems": [
+        "Inglês (Nativo)",
+        "Documentação Técnica (Múltiplos Idiomas)"
+      ],
+      "info": [
+        "<strong>Autorização de Trabalho:</strong> Disponível para trabalho remoto globalmente",
+        "<strong>Disponibilidade:</strong> Posições tempo integral, contrato e freelance",
+        "<strong>Especialização:</strong> Sistemas multi-idioma (6-18 idiomas por projeto)",
+        "<strong>Portfólio:</strong> 10+ repositórios profissionais no GitHub",
+        "<strong>Referências:</strong> Disponíveis mediante solicitação"
+      ]
+    }
+  },
+  "qr": {
+    "scanText": "Digitalizar para acesso rápido"
+  }
+}

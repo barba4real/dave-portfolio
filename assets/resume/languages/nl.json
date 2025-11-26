@@ -1,0 +1,102 @@
+{
+  "name": "Dave Oluwafemi",
+  "title": "Full Stack Ontwikkelaar & Algemeen Directeur",
+  "subtitle": "PHP • Laravel • JavaScript • MySQL • Meertalige Systemen",
+  "location": "Lagos, Nigeria (Open voor Remote functies wereldwijd)",
+  "sections": {
+    "summary": {
+      "title": "Professionele Samenvatting",
+      "content": "Full Stack Ontwikkelaar met <strong>7+ jaar</strong> praktijkervaring in het bouwen van enterprise-grade webapplicaties, financiële platforms, e-commerce oplossingen en meertalige bedrijfssystemen. <strong>Algemeen Directeur</strong> bij Endless Pro Solutions, leidend in de ontwikkeling van geavanceerde digitale systemen inclusief microkrediet platforms, koeriersmanagementsystemen, fintech dashboards en internationale bedrijfswebsites die <strong>6-18 talen</strong> per project ondersteunen.<br><br>gespecialiseerd in <strong>PHP 8.2+, Laravel, MySQL</strong> en moderne webtechnologieën. Bewezen expertise in het leveren van schaalbare, veilige en hoogpresterende applicaties voor banking, logistiek, e-commerce en enterprise infrastructuur sectoren. Sterke achtergrond in <strong>API-integraties, betalingssystemen, real-time tracking</strong> en <strong>AVG-conforme</strong> oplossingen."
+    },
+    "skills": {
+      "title": "Kern Technische Vaardigheden",
+      "categories": {
+        "backend": {
+          "title": "Backend Ontwikkeling",
+          "skills": "PHP 8.2+, Laravel, MySQL 8.0, RESTful APIs, Microservices, PDO, MVC Architectuur, Server Beheer"
+        },
+        "frontend": {
+          "title": "Frontend Ontwikkeling", 
+          "skills": "JavaScript ES6+, Bootstrap 5, jQuery, HTML5, CSS3, Responsive Design, UI/UX Implementatie"
+        },
+        "database": {
+          "title": "Database & Infrastructuur",
+          "skills": "MySQL, Redis, Database Ontwerp, Query Optimalisatie, cPanel, Linux, Apache, Nginx"
+        },
+        "security": {
+          "title": "Beveiliging & Compliance",
+          "skills": "JWT Authenticatie, CSRF Bescherming, Encryptie, AVG Compliance, SQL Injectie Preventie"
+        },
+        "integration": {
+          "title": "Integratie & APIs",
+          "skills": "Betaalgateways (Stripe, PayPal), SMS/Email APIs, WhatsApp Integratie, Derde partij APIs"
+        },
+        "tools": {
+          "title": "Tools & Management",
+          "skills": "Git, GitHub, Docker, Composer, Projectmanagement, SEO, Meertalige i18n"
+        }
+      }
+    },
+    "experience": {
+      "title": "Professionele Ervaring",
+      "jobs": [
+        {
+          "title": "Algemeen Directeur & Lead Full Stack Ontwikkelaar",
+          "company": "Endless Pro Solutions",
+          "location": "Lagos, Nigeria",
+          "period": "2020 – Heden",
+          "duration": "4+ jaar",
+          "responsibilities": [
+            "Leiding van ontwikkelteam bij het creëren van <strong>10+ enterprise webapplicaties</strong> voor internationale klanten",
+            "Architectuur en ontwikkeling van productiesystemen die <strong>6-18 talen elk</strong> ondersteunen",
+            "Bouw van veilige banksystemen die gevoelige financiële transacties afhandelen met <strong>enterprise-grade beveiliging</strong>",
+            "Ontwikkeling van high-volume email platforms die <strong>50M+ emails maandelijks</strong> verwerken",
+            "Creatie van real-time tracking systemen voor logistiek en koeriersdiensten",
+            "Implementatie van <strong>AVG-conforme</strong> leningmanagementsystemen met documentafhandeling",
+            "Beheer van volledige projectlevenscyclus van requirements gathering tot productie deployment",
+            "Integratie van betaalgateways, SMS/WhatsApp APIs en derde partij services"
+          ]
+        }
+      ]
+    },
+    "projects": {
+      "title": "Belangrijke Project Portfolio",
+      "items": [
+        {
+          "name": "SecureBank Pro - Meertalig Banking Systeem",
+          "year": "2024",
+          "tech": "PHP 8.2+, MySQL, Bootstrap 5, 13 Talen, Enterprise Beveiliging",
+          "description": "Complete banking platform met accountbeheer, transacties, admin console en meertalige ondersteuning voor internationale deployment."
+        }
+      ]
+    },
+    "education": {
+      "title": "Onderwijs & Professionele Ontwikkeling",
+      "items": [
+        {
+          "degree": "OND - Elektrotechniek/Elektronica",
+          "institution": "Osun State College of Technology, Esa-Oke",
+          "period": "2003 – 2005"
+        }
+      ]
+    },
+    "additional": {
+      "title": "Talen & Aanvullende Informatie",
+      "languages": "Talen:",
+      "languageItems": [
+        "Engels (Moedertaal)",
+        "Technische Documentatie (Meerdere Talen)"
+      ],
+      "info": [
+        "<strong>Werkvergunning:</strong> Beschikbaar voor remote werk wereldwijd",
+        "<strong>Beschikbaarheid:</strong> Fulltime, Contract en Freelance posities",
+        "<strong>Specialisatie:</strong> Meertalige systemen (6-18 talen per project)",
+        "<strong>Portfolio:</strong> 10+ professionele repositories op GitHub",
+        "<strong>Referenties:</strong> Beschikbaar op aanvraag"
+      ]
+    }
+  },
+  "qr": {
+    "scanText": "Scan voor snelle toegang"
+  }
+}

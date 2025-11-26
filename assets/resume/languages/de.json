@@ -1,0 +1,102 @@
+{
+  "name": "Dave Oluwafemi",
+  "title": "Full Stack Entwickler & Geschäftsführer",
+  "subtitle": "PHP • Laravel • JavaScript • MySQL • Mehrsprachige Systeme",
+  "location": "Lagos, Nigeria (Offen für Remote-Positionen weltweit)",
+  "sections": {
+    "summary": {
+      "title": "Berufliche Zusammenfassung",
+      "content": "Full Stack Entwickler mit <strong>7+ Jahren</strong> praktischer Erfahrung in der Entwicklung von Unternehmensanwendungen, Finanzplattformen, E-Commerce-Lösungen und mehrsprachigen Geschäftssystemen. <strong>Geschäftsführer</strong> bei Endless Pro Solutions, verantwortlich für die Entwicklung fortschrittlicher digitaler Systeme einschließlich Mikrokreditplattformen, Kuriermanagementsysteme, Fintech-Dashboards und internationale Geschäftswebsites mit Unterstützung für <strong>6-18 Sprachen</strong> pro Projekt.<br><br>Spezialisiert auf <strong>PHP 8.2+, Laravel, MySQL</strong> und moderne Webtechnologien. Nachgewiesene Expertise in der Bereitstellung skalierbarer, sicherer und leistungsstarker Anwendungen für Banking, Logistik, E-Commerce und Unternehmensinfrastruktursektoren. Starker Hintergrund in <strong>API-Integrationen, Zahlungssystemen, Echtzeit-Tracking</strong> und <strong>DSGVO-konformen</strong> Lösungen."
+    },
+    "skills": {
+      "title": "Kernkompetenzen",
+      "categories": {
+        "backend": {
+          "title": "Backend-Entwicklung",
+          "skills": "PHP 8.2+, Laravel, MySQL 8.0, RESTful APIs, Microservices, PDO, MVC-Architektur, Server-Management"
+        },
+        "frontend": {
+          "title": "Frontend-Entwicklung", 
+          "skills": "JavaScript ES6+, Bootstrap 5, jQuery, HTML5, CSS3, Responsive Design, UI/UX-Implementierung"
+        },
+        "database": {
+          "title": "Datenbank & Infrastruktur",
+          "skills": "MySQL, Redis, Datenbankdesign, Query-Optimierung, cPanel, Linux, Apache, Nginx"
+        },
+        "security": {
+          "title": "Sicherheit & Compliance",
+          "skills": "JWT-Authentifizierung, CSRF-Schutz, Verschlüsselung, DSGVO-Compliance, SQL-Injection-Prävention"
+        },
+        "integration": {
+          "title": "Integration & APIs",
+          "skills": "Zahlungsgateways (Stripe, PayPal), SMS/E-Mail-APIs, WhatsApp-Integration, Drittanbieter-APIs"
+        },
+        "tools": {
+          "title": "Tools & Management",
+          "skills": "Git, GitHub, Docker, Composer, Projektmanagement, SEO, Mehrsprachige i18n"
+        }
+      }
+    },
+    "experience": {
+      "title": "Berufserfahrung",
+      "jobs": [
+        {
+          "title": "Geschäftsführer & Lead Full Stack Entwickler",
+          "company": "Endless Pro Solutions",
+          "location": "Lagos, Nigeria",
+          "period": "2020 – Heute",
+          "duration": "4+ Jahre",
+          "responsibilities": [
+            "Leitung des Entwicklungsteams bei der Erstellung von <strong>10+ Unternehmensanwendungen</strong> für internationale Kunden",
+            "Architektur und Entwicklung von Produktionssystemen mit Unterstützung für <strong>6-18 Sprachen jeweils</strong>",
+            "Entwicklung sicherer Banking-Systeme für sensible Finanztransaktionen mit <strong>Unternehmenssicherheit</strong>",
+            "Entwicklung von E-Mail-Plattformen mit hohem Volumen für <strong>50M+ E-Mails monatlich</strong>",
+            "Erstellung von Echtzeit-Tracking-Systemen für Logistik- und Kurieroperationen",
+            "Implementierung <strong>DSGVO-konformer</strong> Kreditverwaltungssysteme mit Dokumentenhandhabung",
+            "Management des vollständigen Projektlebenszyklus von der Anforderungserfassung bis zur Produktionsbereitstellung",
+            "Integration von Zahlungsgateways, SMS/WhatsApp-APIs und Drittanbieterdiensten"
+          ]
+        }
+      ]
+    },
+    "projects": {
+      "title": "Wichtige Projektportfolio",
+      "items": [
+        {
+          "name": "SecureBank Pro - Mehrsprachiges Banking-System",
+          "year": "2024",
+          "tech": "PHP 8.2+, MySQL, Bootstrap 5, 13 Sprachen, Unternehmenssicherheit",
+          "description": "Vollständige Banking-Plattform mit Kontoverwaltung, Transaktionen, Admin-Konsole und mehrsprachiger Unterstützung für internationale Bereitstellung."
+        }
+      ]
+    },
+    "education": {
+      "title": "Bildung & Berufliche Entwicklung",
+      "items": [
+        {
+          "degree": "OND - Elektro-/Elektroniktechnik",
+          "institution": "Osun State College of Technology, Esa-Oke",
+          "period": "2003 – 2005"
+        }
+      ]
+    },
+    "additional": {
+      "title": "Sprachen & Zusätzliche Informationen",
+      "languages": "Sprachen:",
+      "languageItems": [
+        "Englisch (Muttersprache)",
+        "Technische Dokumentation (Mehrere Sprachen)"
+      ],
+      "info": [
+        "<strong>Arbeitserlaubnis:</strong> Verfügbar für Remote-Arbeit weltweit",
+        "<strong>Verfügbarkeit:</strong> Vollzeit-, Vertrags- und Freelance-Positionen",
+        "<strong>Spezialisierung:</strong> Mehrsprachige Systeme (6-18 Sprachen pro Projekt)",
+        "<strong>Portfolio:</strong> 10+ professionelle Repositories auf GitHub",
+        "<strong>Referenzen:</strong> Auf Anfrage verfügbar"
+      ]
+    }
+  },
+  "qr": {
+    "scanText": "Scannen für schnellen Zugriff"
+  }
+}

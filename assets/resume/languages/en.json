@@ -1,0 +1,102 @@
+{
+  "name": "Dave Oluwafemi",
+  "title": "Full Stack Developer & General Manager",
+  "subtitle": "PHP • Laravel • JavaScript • MySQL • Multi-Language Systems",
+  "location": "Lagos, Nigeria (Open to Remote Roles Globally)",
+  "sections": {
+    "summary": {
+      "title": "Professional Summary",
+      "content": "Full Stack Developer with <strong>7+ years</strong> of hands-on experience building enterprise-grade web applications, financial platforms, e-commerce solutions, and multi-language business systems. <strong>General Manager</strong> at Endless Pro Solutions, leading development of advanced digital systems including micro-loan platforms, courier management systems, fintech dashboards, and international business websites supporting <strong>6-18 languages</strong> per project.<br><br>Specialized in <strong>PHP 8.2+, Laravel, MySQL</strong>, and modern web technologies. Proven expertise in delivering scalable, secure, and high-performance applications for banking, logistics, e-commerce, and enterprise infrastructure sectors. Strong background in <strong>API integrations, payment systems, real-time tracking,</strong> and <strong>GDPR-compliant</strong> solutions."
+    },
+    "skills": {
+      "title": "Core Technical Skills",
+      "categories": {
+        "backend": {
+          "title": "Backend Development",
+          "skills": "PHP 8.2+, Laravel, MySQL 8.0, RESTful APIs, Microservices, PDO, MVC Architecture, Server Management"
+        },
+        "frontend": {
+          "title": "Frontend Development", 
+          "skills": "JavaScript ES6+, Bootstrap 5, jQuery, HTML5, CSS3, Responsive Design, UI/UX Implementation"
+        },
+        "database": {
+          "title": "Database & Infrastructure",
+          "skills": "MySQL, Redis, Database Design, Query Optimization, cPanel, Linux, Apache, Nginx"
+        },
+        "security": {
+          "title": "Security & Compliance",
+          "skills": "JWT Authentication, CSRF Protection, Encryption, GDPR Compliance, SQL Injection Prevention"
+        },
+        "integration": {
+          "title": "Integration & APIs",
+          "skills": "Payment Gateways (Stripe, PayPal), SMS/Email APIs, WhatsApp Integration, Third-party APIs"
+        },
+        "tools": {
+          "title": "Tools & Management",
+          "skills": "Git, GitHub, Docker, Composer, Project Management, SEO, Multi-language i18n"
+        }
+      }
+    },
+    "experience": {
+      "title": "Professional Experience",
+      "jobs": [
+        {
+          "title": "General Manager & Lead Full Stack Developer",
+          "company": "Endless Pro Solutions",
+          "location": "Lagos, Nigeria",
+          "period": "2020 – Present",
+          "duration": "4+ years",
+          "responsibilities": [
+            "Lead development team in creating <strong>10+ enterprise web applications</strong> for international clients",
+            "Architected and developed production systems supporting <strong>6-18 languages each</strong>",
+            "Built secure banking systems handling sensitive financial transactions with <strong>enterprise-grade security</strong>",
+            "Developed high-volume email platforms processing <strong>50M+ emails monthly</strong>",
+            "Created real-time tracking systems for logistics and courier operations",
+            "Implemented <strong>GDPR-compliant</strong> loan management systems with document handling",
+            "Managed full project lifecycle from requirements gathering to production deployment",
+            "Integrated payment gateways, SMS/WhatsApp APIs, and third-party services"
+          ]
+        }
+      ]
+    },
+    "projects": {
+      "title": "Key Project Portfolio",
+      "items": [
+        {
+          "name": "SecureBank Pro - Multi-Language Banking System",
+          "year": "2024",
+          "tech": "PHP 8.2+, MySQL, Bootstrap 5, 13 Languages, Enterprise Security",
+          "description": "Complete banking platform with account management, transactions, admin console, and multi-language support for international deployment."
+        }
+      ]
+    },
+    "education": {
+      "title": "Education & Professional Development",
+      "items": [
+        {
+          "degree": "OND - Electrical/Electronics Engineering",
+          "institution": "Osun State College of Technology, Esa-Oke",
+          "period": "2003 – 2005"
+        }
+      ]
+    },
+    "additional": {
+      "title": "Languages & Additional Information",
+      "languages": "Languages:",
+      "languageItems": [
+        "English (Native)",
+        "Technical Documentation (Multiple Languages)"
+      ],
+      "info": [
+        "<strong>Work Authorization:</strong> Available for remote work globally",
+        "<strong>Availability:</strong> Full-time, Contract, and Freelance positions",
+        "<strong>Specialization:</strong> Multi-language systems (6-18 languages per project)",
+        "<strong>Portfolio:</strong> 10+ professional repositories on GitHub",
+        "<strong>References:</strong> Available upon request"
+      ]
+    }
+  },
+  "qr": {
+    "scanText": "Scan for quick access"
+  }
+}
