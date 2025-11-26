@@ -20,34 +20,7 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
         
-        /* Magnifying Glass */
-        .magnifying-glass {
-            position: fixed;
-            width: 200px;
-            height: 200px;
-            border: 3px solid #3498db;
-            border-radius: 50%;
-            background: white;
-            pointer-events: none;
-            z-index: 999;
-            display: none;
-            overflow: hidden;
-            box-shadow: 0 0 20px rgba(0,0,0,0.3);
-        }
-        
-        .magnifying-content {
-            position: absolute;
-            transform-origin: top left;
-            pointer-events: none;
-        }
-        
-        .magnify-active {
-            cursor: none !important;
-        }
-        
-        .magnify-toggle {
-            background: #e74c3c !important;
-        }
+
         .magnifier-btn {
             width: 35px;
             height: 35px;
@@ -88,10 +61,10 @@
             margin: 0 auto; 
             padding: 30px;
             min-height: 100vh;
-            zoom: 1.15;
-            -webkit-transform: scale(1.15);
-            -moz-transform: scale(1.15);
-            transform: scale(1.15);
+            zoom: 1;
+            -webkit-transform: scale(1);
+            -moz-transform: scale(1);
+            transform: scale(1);
             transform-origin: top center;
         }
         
@@ -393,15 +366,9 @@
     <!-- Magnifier Controls -->
     <div class="magnifier-controls">
         <button class="magnifier-btn" onclick="zoomOut()" title="Zoom Out">−</button>
-        <div class="zoom-level" id="zoomLevel">115%</div>
+        <div class="zoom-level" id="zoomLevel">100%</div>
         <button class="magnifier-btn" onclick="zoomIn()" title="Zoom In">+</button>
         <button class="magnifier-btn" onclick="resetZoom()" title="Reset Zoom">⌂</button>
-        <button class="magnifier-btn" id="magnifyToggle" onclick="toggleMagnify()" title="Toggle Magnifying Glass">🔍</button>
-    </div>
-    
-    <!-- Magnifying Glass -->
-    <div class="magnifying-glass" id="magnifyingGlass">
-        <div class="magnifying-content" id="magnifyingContent"></div>
     </div>
     <div class="container">
         <!-- Header -->
@@ -661,13 +628,9 @@
     </div>
 
     <script>
-        let currentZoom = 1.15;
-        let magnifyActive = false;
+        let currentZoom = 1;
         const container = document.querySelector('.container');
         const zoomDisplay = document.getElementById('zoomLevel');
-        const magnifyingGlass = document.getElementById('magnifyingGlass');
-        const magnifyingContent = document.getElementById('magnifyingContent');
-        const magnifyToggle = document.getElementById('magnifyToggle');
         
         function updateZoom() {
             container.style.zoom = currentZoom;
@@ -690,51 +653,9 @@
         }
         
         function resetZoom() {
-            currentZoom = 1.15;
+            currentZoom = 1;
             updateZoom();
         }
-        
-        function toggleMagnify() {
-            magnifyActive = !magnifyActive;
-            if (magnifyActive) {
-                document.body.classList.add('magnify-active');
-                magnifyToggle.classList.add('magnify-toggle');
-                magnifyingGlass.style.display = 'block';
-                // Clone the entire page content for magnification
-                magnifyingContent.innerHTML = document.body.innerHTML;
-                // Apply same styles to magnified content
-                magnifyingContent.style.width = document.body.scrollWidth + 'px';
-                magnifyingContent.style.height = document.body.scrollHeight + 'px';
-            } else {
-                document.body.classList.remove('magnify-active');
-                magnifyToggle.classList.remove('magnify-toggle');
-                magnifyingGlass.style.display = 'none';
-            }
-        }
-        
-        // Mouse tracking for magnifying glass
-        document.addEventListener('mousemove', function(e) {
-            if (!magnifyActive) return;
-            
-            const glassSize = 200;
-            const zoomFactor = 2.5;
-            
-            // Position the magnifying glass
-            magnifyingGlass.style.left = (e.clientX - glassSize/2) + 'px';
-            magnifyingGlass.style.top = (e.clientY - glassSize/2) + 'px';
-            
-            // Get mouse position relative to page
-            const mouseX = e.pageX;
-            const mouseY = e.pageY;
-            
-            // Calculate the translation needed to center the content under cursor
-            const translateX = (glassSize / 2 / zoomFactor) - mouseX;
-            const translateY = (glassSize / 2 / zoomFactor) - mouseY;
-            
-            // Apply the transformation
-            magnifyingContent.style.transform = `translate(${translateX}px, ${translateY}px) scale(${zoomFactor})`;
-            magnifyingContent.style.transformOrigin = 'top left';
-        });
         
         // Keyboard shortcuts
         document.addEventListener('keydown', function(e) {
@@ -755,14 +676,10 @@
         // Hide controls when printing
         window.addEventListener('beforeprint', function() {
             document.querySelector('.magnifier-controls').style.display = 'none';
-            magnifyingGlass.style.display = 'none';
         });
         
         window.addEventListener('afterprint', function() {
             document.querySelector('.magnifier-controls').style.display = 'flex';
-            if (magnifyActive) {
-                magnifyingGlass.style.display = 'block';
-            }
         });
     </script>
 </body>
