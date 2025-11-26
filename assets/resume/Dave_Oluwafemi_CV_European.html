@@ -358,139 +358,17 @@
             .qr-codes { justify-content: center; }
         }
         
-        /* Print Optimization */
+        /* Print Optimization - Hide widgets only */
         @media print {
-            body { 
-                font-size: 12pt;
-                background: white !important;
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
-                line-height: 1.4;
-            }
-            
-            .container { 
-                padding: 20mm 15mm;
-                max-width: none;
-                margin: 0;
-                zoom: 1 !important;
-                transform: none !important;
-                box-shadow: none;
-            }
-            
             /* Hide controls when printing */
             .magnifier-controls {
                 display: none !important;
             }
             
-            /* Maintain original layout proportions */
-            .header {
-                margin-bottom: 15px;
-                padding-bottom: 10px;
-            }
-            
-            .name {
-                font-size: 24pt;
-                margin-bottom: 5px;
-            }
-            
-            .title {
-                font-size: 14pt;
-                margin-bottom: 8px;
-            }
-            
-            .subtitle {
-                font-size: 10pt;
-                margin-bottom: 12px;
-            }
-            
-            .contact-info {
-                font-size: 9pt;
-                line-height: 1.5;
-            }
-            
-            .section {
-                margin-bottom: 15px;
-                page-break-inside: avoid;
-            }
-            
-            .section-title {
-                font-size: 13pt;
-                margin-bottom: 10px;
-                padding-bottom: 3px;
-            }
-            
-            .summary {
-                padding: 12px;
-                font-size: 10pt;
-                line-height: 1.5;
-            }
-            
-            .skills-grid {
-                gap: 10px;
-            }
-            
-            .skill-category {
-                padding: 8px;
-            }
-            
-            .skill-category h4 {
-                font-size: 10pt;
-                margin-bottom: 5px;
-            }
-            
-            .skill-list {
-                font-size: 9pt;
-                line-height: 1.4;
-            }
-            
-            .job {
-                margin-bottom: 12px;
-                page-break-inside: avoid;
-            }
-            
-            .job-title {
-                font-size: 11pt;
-            }
-            
-            .job-company {
-                font-size: 10pt;
-            }
-            
-            .job-description {
-                font-size: 9pt;
-                line-height: 1.4;
-            }
-            
-            .project {
-                margin-bottom: 10px;
-                padding: 6px;
-                page-break-inside: avoid;
-            }
-            
-            .project-name {
-                font-size: 10pt;
-            }
-            
-            .project-tech {
-                font-size: 8pt;
-            }
-            
-            .project-desc {
-                font-size: 9pt;
-                line-height: 1.3;
-            }
-            
-            .qr-codes {
-                gap: 6px;
-            }
-            
-            .qr-code {
-                width: 35px;
-                height: 35px;
-            }
-            
-            .qr-label {
-                font-size: 6pt;
+            /* Ensure colors print properly */
+            body {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
             }
         }
         
