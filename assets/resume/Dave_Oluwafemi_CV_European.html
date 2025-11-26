@@ -723,16 +723,16 @@
             magnifyingGlass.style.left = (e.clientX - glassSize/2) + 'px';
             magnifyingGlass.style.top = (e.clientY - glassSize/2) + 'px';
             
-            // Calculate what should be shown in the center of the magnifying glass
+            // Get mouse position relative to page
             const mouseX = e.pageX;
             const mouseY = e.pageY;
             
-            // Calculate the offset to center the content under the cursor
-            const offsetX = (glassSize / 2) - (mouseX * zoomFactor);
-            const offsetY = (glassSize / 2) - (mouseY * zoomFactor);
+            // Calculate the translation needed to center the content under cursor
+            const translateX = (glassSize / 2 / zoomFactor) - mouseX;
+            const translateY = (glassSize / 2 / zoomFactor) - mouseY;
             
             // Apply the transformation
-            magnifyingContent.style.transform = `scale(${zoomFactor}) translate(${offsetX}px, ${offsetY}px)`;
+            magnifyingContent.style.transform = `translate(${translateX}px, ${translateY}px) scale(${zoomFactor})`;
             magnifyingContent.style.transformOrigin = 'top left';
         });
         
