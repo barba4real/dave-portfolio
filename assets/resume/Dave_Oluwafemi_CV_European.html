@@ -6,6 +6,44 @@
     <title>Dave Oluwafemi - Curriculum Vitae</title>
 
     <style>
+        /* Magnifier Controls */
+        .magnifier-controls {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: rgba(52, 73, 94, 0.9);
+            border-radius: 25px;
+            padding: 8px;
+            display: flex;
+            gap: 5px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .magnifier-btn {
+            width: 35px;
+            height: 35px;
+            border: none;
+            border-radius: 50%;
+            background: #3498db;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        .magnifier-btn:hover {
+            background: #2980b9;
+            transform: scale(1.1);
+        }
+        .zoom-level {
+            color: white;
+            font-size: 10px;
+            padding: 8px;
+            min-width: 40px;
+            text-align: center;
+        }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
@@ -323,6 +361,13 @@
     </style>
 </head>
 <body>
+    <!-- Magnifier Controls -->
+    <div class="magnifier-controls">
+        <button class="magnifier-btn" onclick="zoomOut()" title="Zoom Out">−</button>
+        <div class="zoom-level" id="zoomLevel">115%</div>
+        <button class="magnifier-btn" onclick="zoomIn()" title="Zoom In">+</button>
+        <button class="magnifier-btn" onclick="resetZoom()" title="Reset Zoom">⌂</button>
+    </div>
     <div class="container">
         <!-- Header -->
         <div class="header">
@@ -580,5 +625,60 @@
         </div>
     </div>
 
+    <script>
+        let currentZoom = 1.15;
+        const container = document.querySelector('.container');
+        const zoomDisplay = document.getElementById('zoomLevel');
+        
+        function updateZoom() {
+            container.style.zoom = currentZoom;
+            container.style.transform = `scale(${currentZoom})`;
+            zoomDisplay.textContent = Math.round(currentZoom * 100) + '%';
+        }
+        
+        function zoomIn() {
+            if (currentZoom < 2.0) {
+                currentZoom += 0.1;
+                updateZoom();
+            }
+        }
+        
+        function zoomOut() {
+            if (currentZoom > 0.5) {
+                currentZoom -= 0.1;
+                updateZoom();
+            }
+        }
+        
+        function resetZoom() {
+            currentZoom = 1.15;
+            updateZoom();
+        }
+        
+        // Keyboard shortcuts
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey || e.metaKey) {
+                if (e.key === '=' || e.key === '+') {
+                    e.preventDefault();
+                    zoomIn();
+                } else if (e.key === '-') {
+                    e.preventDefault();
+                    zoomOut();
+                } else if (e.key === '0') {
+                    e.preventDefault();
+                    resetZoom();
+                }
+            }
+        });
+        
+        // Hide controls when printing
+        window.addEventListener('beforeprint', function() {
+            document.querySelector('.magnifier-controls').style.display = 'none';
+        });
+        
+        window.addEventListener('afterprint', function() {
+            document.querySelector('.magnifier-controls').style.display = 'flex';
+        });
+    </script>
 </body>
 </html>
