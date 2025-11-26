@@ -92,6 +92,18 @@
             color: white;
         }
         
+        .btn-outline-light:hover {
+            background: white;
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+        
+        .btn-outline-primary:hover {
+            background: var(--secondary-color);
+            border-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+        
         .stats-counter {
             font-size: 2.5rem;
             font-weight: bold;
@@ -162,6 +174,7 @@
                     <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="assets/resume/Dave_Oluwafemi_Resume.pdf" target="_blank" id="navResumeBtn"><i class="fas fa-download me-1"></i>Resume</a></li>
                 </ul>
             </div>
         </div>
@@ -181,8 +194,11 @@
                         <span class="badge bg-light text-dark me-2 p-2">MySQL</span>
                         <span class="badge bg-light text-dark me-2 p-2">Multi-Language Systems</span>
                     </div>
-                    <div class="d-flex gap-3">
+                    <div class="d-flex gap-3 flex-wrap">
                         <a href="#projects" class="btn btn-light btn-lg">View Projects</a>
+                        <a href="assets/resume/Dave_Oluwafemi_Resume.pdf" target="_blank" class="btn btn-outline-light btn-lg" id="resumeBtn">
+                            <i class="fas fa-download me-2"></i>Download Resume
+                        </a>
                         <a href="#contact" class="contact-btn">Get In Touch</a>
                     </div>
                 </div>
@@ -486,6 +502,9 @@
                         <a href="https://github.com/barba4real" target="_blank" class="btn btn-dark btn-lg me-3">
                             <i class="fab fa-github me-2"></i>View GitHub Profile
                         </a>
+                        <a href="assets/resume/Dave_Oluwafemi_Resume.pdf" target="_blank" class="btn btn-outline-primary btn-lg me-3" id="resumeBtn2">
+                            <i class="fas fa-file-pdf me-2"></i>Download Resume
+                        </a>
                         <a href="mailto:daveoluwafemi6@gmail.com" class="contact-btn">
                             <i class="fas fa-paper-plane me-2"></i>Send Message
                         </a>
@@ -526,6 +545,43 @@
                 navbar.classList.remove('bg-dark');
             }
         });
+
+        // Resume availability check
+        function checkResumeAvailability() {
+            const resumeButtons = document.querySelectorAll('#resumeBtn, #resumeBtn2, #navResumeBtn');
+            
+            // Check if resume file exists
+            fetch('assets/resume/Dave_Oluwafemi_Resume.pdf', { method: 'HEAD' })
+                .then(response => {
+                    if (!response.ok) {
+                        // Resume not available, update buttons
+                        resumeButtons.forEach(btn => {
+                            btn.innerHTML = '<i class="fas fa-clock me-2"></i>Resume Coming Soon';
+                            btn.classList.add('disabled');
+                            btn.style.opacity = '0.6';
+                            btn.onclick = function(e) {
+                                e.preventDefault();
+                                alert('Resume will be available soon. Please check back later or contact me directly.');
+                            };
+                        });
+                    }
+                })
+                .catch(() => {
+                    // Resume not available
+                    resumeButtons.forEach(btn => {
+                        btn.innerHTML = '<i class="fas fa-clock me-2"></i>Resume Coming Soon';
+                        btn.classList.add('disabled');
+                        btn.style.opacity = '0.6';
+                        btn.onclick = function(e) {
+                            e.preventDefault();
+                            alert('Resume will be available soon. Please check back later or contact me directly.');
+                        };
+                    });
+                });
+        }
+
+        // Check resume availability on page load
+        document.addEventListener('DOMContentLoaded', checkResumeAvailability);
     </script>
 </body>
 </html>
