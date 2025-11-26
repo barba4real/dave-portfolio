@@ -835,9 +835,9 @@
         function updateAdditionalSection(data) {
             const section = document.querySelector('.section:last-child');
             const title = section.querySelector('.section-title');
-            const languagesLabel = section.querySelector('strong');
+            const languagesLabel = section.querySelector('div strong');
             const languageItems = section.querySelectorAll('.language');
-            const infoDiv = section.querySelector('div:last-child');
+            const infoDiv = section.querySelector('div[style*="font-size: 11pt"]');
             
             if (title) title.textContent = data.title;
             if (languagesLabel) languagesLabel.textContent = data.languages;
