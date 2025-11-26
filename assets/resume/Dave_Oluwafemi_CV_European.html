@@ -700,8 +700,11 @@
                 document.body.classList.add('magnify-active');
                 magnifyToggle.classList.add('magnify-toggle');
                 magnifyingGlass.style.display = 'block';
-                // Clone the container content
-                magnifyingContent.innerHTML = container.innerHTML;
+                // Clone the entire page content for magnification
+                magnifyingContent.innerHTML = document.body.innerHTML;
+                // Apply same styles to magnified content
+                magnifyingContent.style.width = document.body.scrollWidth + 'px';
+                magnifyingContent.style.height = document.body.scrollHeight + 'px';
             } else {
                 document.body.classList.remove('magnify-active');
                 magnifyToggle.classList.remove('magnify-toggle');
@@ -714,26 +717,23 @@
             if (!magnifyActive) return;
             
             const glassSize = 200;
-            const zoomFactor = 2;
+            const zoomFactor = 2.5;
             
             // Position the magnifying glass
             magnifyingGlass.style.left = (e.clientX - glassSize/2) + 'px';
             magnifyingGlass.style.top = (e.clientY - glassSize/2) + 'px';
             
-            // Get the exact position relative to the page
-            const pageX = e.pageX;
-            const pageY = e.pageY;
+            // Calculate what should be shown in the center of the magnifying glass
+            const mouseX = e.pageX;
+            const mouseY = e.pageY;
             
-            // Calculate the center point of the magnifying glass
-            const centerX = glassSize / 2;
-            const centerY = glassSize / 2;
+            // Calculate the offset to center the content under the cursor
+            const offsetX = (glassSize / 2) - (mouseX * zoomFactor);
+            const offsetY = (glassSize / 2) - (mouseY * zoomFactor);
             
-            // Position the magnified content to show exactly what's under the cursor
-            const translateX = centerX - (pageX * zoomFactor);
-            const translateY = centerY - (pageY * zoomFactor);
-            
-            magnifyingContent.style.transform = `scale(${zoomFactor}) translate(${translateX}px, ${translateY}px)`;
-            magnifyingContent.style.transformOrigin = '0 0';
+            // Apply the transformation
+            magnifyingContent.style.transform = `scale(${zoomFactor}) translate(${offsetX}px, ${offsetY}px)`;
+            magnifyingContent.style.transformOrigin = 'top left';
         });
         
         // Keyboard shortcuts
