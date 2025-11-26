@@ -698,6 +698,22 @@
             }
         });
         
+        // Auto-detect browser language on page load
+        function detectBrowserLanguage() {
+            const browserLang = navigator.language || navigator.userLanguage;
+            const langCode = browserLang.split('-')[0].toLowerCase();
+            
+            // Check if browser language is supported
+            const supportedLangs = ['en', 'de', 'fr', 'nl', 'es', 'pt'];
+            if (supportedLangs.includes(langCode)) {
+                languageSelector.value = langCode;
+                currentLanguage = langCode;
+                if (langCode !== 'en') {
+                    changeLanguage();
+                }
+            }
+        }
+        
         // Language switching functionality
         async function changeLanguage() {
             const selectedLang = languageSelector.value;
@@ -860,6 +876,11 @@
         
         window.addEventListener('afterprint', function() {
             document.querySelector('.magnifier-controls').style.display = 'flex';
+        });
+        
+        // Auto-detect language when page loads
+        window.addEventListener('DOMContentLoaded', function() {
+            detectBrowserLanguage();
         });
     </script>
 </body>
