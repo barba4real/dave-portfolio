@@ -9,16 +9,23 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            line-height: 1.5; 
+            line-height: 1.6; 
             color: #2c3e50; 
             background: white;
-            font-size: 11pt;
+            font-size: 14pt;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
         .container { 
-            max-width: 210mm; 
+            max-width: 900px; 
             margin: 0 auto; 
-            padding: 15mm;
-            min-height: 297mm;
+            padding: 30px;
+            min-height: 100vh;
+            zoom: 1.15;
+            -webkit-transform: scale(1.15);
+            -moz-transform: scale(1.15);
+            transform: scale(1.15);
+            transform-origin: top center;
         }
         
         /* Header Section */
@@ -41,29 +48,29 @@
         }
         
         .name { 
-            font-size: 28pt; 
+            font-size: 32pt; 
             font-weight: bold; 
             color: #2c3e50; 
-            margin-bottom: 5px;
+            margin-bottom: 8px;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
         .title { 
-            font-size: 14pt; 
+            font-size: 16pt; 
             color: #3498db; 
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             font-weight: 500;
         }
         .subtitle {
-            font-size: 10pt;
+            font-size: 12pt;
             color: #7f8c8d;
-            margin-bottom: 15px;
+            margin-bottom: 18px;
         }
         
         .contact-info { 
-            font-size: 9pt; 
+            font-size: 11pt; 
             color: #34495e;
-            line-height: 1.6;
+            line-height: 1.8;
         }
         .contact-info a { 
             color: #3498db; 
@@ -101,23 +108,24 @@
             page-break-inside: avoid;
         }
         .section-title { 
-            font-size: 13pt; 
+            font-size: 15pt; 
             font-weight: bold; 
             color: #2c3e50; 
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            margin-bottom: 8px;
-            padding-bottom: 3px;
-            border-bottom: 1px solid #3498db;
+            margin-bottom: 12px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #3498db;
         }
         
         /* Professional Summary */
         .summary {
             background: #f8f9fa;
-            padding: 12px;
+            padding: 16px;
             border-left: 4px solid #3498db;
-            font-size: 10pt;
+            font-size: 12pt;
             text-align: justify;
+            line-height: 1.7;
         }
         
         /* Experience */
@@ -140,23 +148,24 @@
         }
         .job-title { 
             font-weight: bold; 
-            font-size: 11pt; 
+            font-size: 13pt; 
             color: #2c3e50; 
         }
         .job-company { 
             font-weight: 600; 
             color: #3498db; 
-            font-size: 10pt;
+            font-size: 12pt;
         }
         .job-location {
-            font-size: 9pt;
+            font-size: 10pt;
             color: #7f8c8d;
             font-style: italic;
         }
         .job-description { 
             margin-left: 0; 
-            font-size: 9pt;
+            font-size: 11pt;
             color: #34495e;
+            line-height: 1.6;
         }
         .job-description li { 
             margin-bottom: 2px; 
@@ -185,13 +194,13 @@
         }
         .skill-category h4 { 
             color: #2c3e50; 
-            margin-bottom: 5px; 
-            font-size: 10pt;
+            margin-bottom: 8px; 
+            font-size: 12pt;
         }
         .skill-list { 
-            font-size: 9pt; 
+            font-size: 10pt; 
             color: #34495e;
-            line-height: 1.4;
+            line-height: 1.6;
         }
         
         /* Projects */
@@ -266,20 +275,45 @@
             color: #2c3e50;
         }
         
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+                zoom: 1;
+                transform: none;
+                max-width: 100%;
+            }
+            .name { font-size: 24pt; }
+            .title { font-size: 14pt; }
+            .header { flex-direction: column; text-align: center; }
+            .header-right { align-items: center; margin-top: 15px; }
+            .skills-grid { grid-template-columns: 1fr; }
+            .job-header { flex-direction: column; }
+            .job-right { text-align: left; margin-top: 5px; }
+            .education-item { flex-direction: column; }
+            .education-right { text-align: left; margin-top: 3px; }
+            .project-header { flex-direction: column; }
+        }
+        
+        @media (max-width: 480px) {
+            body { font-size: 12pt; }
+            .container { padding: 10px; }
+            .name { font-size: 20pt; }
+            .title { font-size: 12pt; }
+            .qr-codes { justify-content: center; }
+        }
+        
         /* Print Optimization */
         @media print {
-            body { font-size: 10pt; }
+            body { font-size: 11pt; }
             .container { 
-                padding: 10mm;
+                padding: 15mm;
                 max-width: none;
                 margin: 0;
+                zoom: 1;
+                transform: none;
             }
-            .section { margin-bottom: 15px; }
-            .qr-code { 
-                width: 35px; 
-                height: 35px; 
-                font-size: 7pt;
-            }
+            .section { margin-bottom: 18px; }
         }
         
         @page {
@@ -536,7 +570,7 @@
                 </div>
             </div>
             
-            <div style="font-size: 9pt; color: #34495e;">
+            <div style="font-size: 11pt; color: #34495e; line-height: 1.7;">
                 <strong>Work Authorization:</strong> Available for remote work globally<br>
                 <strong>Availability:</strong> Full-time, Contract, and Freelance positions<br>
                 <strong>Specialization:</strong> Multi-language systems (6-18 languages per project)<br>
