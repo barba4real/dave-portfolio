@@ -370,6 +370,38 @@
                 -webkit-print-color-adjust: exact;
                 print-color-adjust: exact;
             }
+            
+            /* Force header layout to stay exactly as screen */
+            .header {
+                display: flex !important;
+                justify-content: space-between !important;
+                align-items: flex-start !important;
+            }
+            
+            .header-left {
+                flex: 2 !important;
+                text-align: left !important;
+            }
+            
+            .header-right {
+                flex: 1 !important;
+                text-align: right !important;
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: flex-end !important;
+            }
+            
+            /* Keep contact info left-aligned */
+            .contact-info {
+                text-align: left !important;
+            }
+            
+            /* Keep QR codes on the right */
+            .qr-codes {
+                display: flex !important;
+                gap: 8px !important;
+                margin-top: 10px !important;
+            }
         }
         
         @page {
