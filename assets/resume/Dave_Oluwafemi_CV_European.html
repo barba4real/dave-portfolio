@@ -360,15 +360,62 @@
         
         /* Print Optimization */
         @media print {
-            body { font-size: 11pt; }
+            body { 
+                font-size: 11pt;
+                background: white !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
             .container { 
                 padding: 15mm;
                 max-width: none;
                 margin: 0;
                 zoom: 1;
                 transform: none;
+                box-shadow: none;
             }
             .section { margin-bottom: 18px; }
+            
+            /* Hide controls when printing */
+            .magnifier-controls {
+                display: none !important;
+            }
+            
+            /* Optimize QR codes for print */
+            .qr-code {
+                width: 40px;
+                height: 40px;
+            }
+            
+            /* Ensure proper page breaks */
+            .section {
+                page-break-inside: avoid;
+            }
+            
+            .job {
+                page-break-inside: avoid;
+            }
+            
+            .project {
+                page-break-inside: avoid;
+            }
+            
+            /* Print-friendly colors */
+            .header {
+                border-bottom: 2px solid #000 !important;
+            }
+            
+            .section-title {
+                border-bottom: 1px solid #000 !important;
+            }
+            
+            .summary {
+                border-left: 3px solid #000 !important;
+            }
+            
+            .skill-category {
+                border-left: 2px solid #000 !important;
+            }
         }
         
         @page {
@@ -384,6 +431,7 @@
         <div class="zoom-level" id="zoomLevel">100%</div>
         <button class="magnifier-btn" onclick="zoomIn()" title="Zoom In">+</button>
         <button class="magnifier-btn" onclick="resetZoom()" title="Reset Zoom">⌂</button>
+        <button class="magnifier-btn" onclick="printResume()" title="Print Resume">🖨️</button>
         <select class="language-selector" id="languageSelector" onchange="changeLanguage()" title="Select Language">
             <option value="en">🇬🇧 EN</option>
             <option value="de">🇩🇪 DE</option>
@@ -869,13 +917,29 @@
             }
         }
         
+        // Print functionality
+        function printResume() {
+            window.print();
+        }
+        
         // Hide controls when printing
         window.addEventListener('beforeprint', function() {
             document.querySelector('.magnifier-controls').style.display = 'none';
+            // Reset zoom for printing
+            const originalZoom = currentZoom;
+            currentZoom = 1;
+            updateZoom();
+            // Store original zoom to restore after printing
+            window.originalZoom = originalZoom;
         });
         
         window.addEventListener('afterprint', function() {
             document.querySelector('.magnifier-controls').style.display = 'flex';
+            // Restore original zoom
+            if (window.originalZoom) {
+                currentZoom = window.originalZoom;
+                updateZoom();
+            }
         });
         
         // Auto-detect language when page loads
