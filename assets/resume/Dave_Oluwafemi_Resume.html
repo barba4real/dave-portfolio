@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dave Oluwafemi - Resume</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Arial', sans-serif; line-height: 1.4; color: #333; background: white; }
+        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+        .header { text-align: center; margin-bottom: 30px; border-bottom: 3px solid #2c3e50; padding-bottom: 20px; }
+        .name { font-size: 32px; font-weight: bold; color: #2c3e50; margin-bottom: 5px; }
+        .title { font-size: 18px; color: #3498db; margin-bottom: 10px; }
+        .contact { font-size: 14px; color: #666; }
+        .contact a { color: #3498db; text-decoration: none; }
+        .section { margin-bottom: 25px; }
+        .section-title { font-size: 20px; font-weight: bold; color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 5px; margin-bottom: 15px; }
+        .job { margin-bottom: 20px; }
+        .job-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px; }
+        .job-title { font-weight: bold; font-size: 16px; color: #2c3e50; }
+        .job-company { font-weight: bold; color: #3498db; }
+        .job-date { font-size: 14px; color: #666; }
+        .job-description { margin-left: 0; }
+        .job-description li { margin-bottom: 3px; }
+        .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
+        .skill-category { }
+        .skill-category h4 { color: #2c3e50; margin-bottom: 5px; }
+        .skill-list { font-size: 14px; color: #666; }
+        .project { margin-bottom: 15px; }
+        .project-name { font-weight: bold; color: #2c3e50; }
+        .project-tech { font-size: 12px; color: #3498db; font-style: italic; }
+        .project-desc { font-size: 14px; color: #666; margin-top: 2px; }
+        @media print {
+            body { font-size: 12px; }
+            .container { padding: 20px 0; }
+            .section { margin-bottom: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="name">Dave Oluwafemi</div>
+            <div class="title">Full Stack Developer & General Manager</div>
+            <div class="contact">
+                📧 <a href="mailto:daveoluwafemi6@gmail.com">daveoluwafemi6@gmail.com</a> | 
+                📱 <a href="https://wa.me/2348131165878">+234 813 116 5878</a> | 
+                💼 <a href="https://www.linkedin.com/in/dave-oluwafemi-53b716132/">LinkedIn</a> | 
+                🌐 <a href="https://github.com/barba4real">GitHub</a>
+            </div>
+        </div>
+
+        <!-- Professional Summary -->
+        <div class="section">
+            <div class="section-title">Professional Summary</div>
+            <p>Experienced Full Stack Developer and General Manager with 7+ years of expertise in developing enterprise-grade web applications. Specialized in PHP, Laravel, MySQL, and multi-language systems serving diverse industries including banking, logistics, ecommerce, and enterprise infrastructure. Proven track record of leading development teams and delivering scalable, secure solutions for international clients.</p>
+        </div>
+
+        <!-- Experience -->
+        <div class="section">
+            <div class="section-title">Professional Experience</div>
+            
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">General Manager & Lead Developer</div>
+                        <div class="job-company">Endless Pro Solutions</div>
+                    </div>
+                    <div class="job-date">2020 - Present</div>
+                </div>
+                <ul class="job-description">
+                    <li>Lead development team in creating enterprise web applications for international clients</li>
+                    <li>Architected and developed 10+ production systems supporting 6-18 languages each</li>
+                    <li>Implemented secure banking systems handling sensitive financial transactions</li>
+                    <li>Built high-volume email platforms processing 50M+ emails monthly</li>
+                    <li>Developed real-time tracking systems for logistics and courier operations</li>
+                    <li>Managed full project lifecycle from requirements gathering to deployment</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Senior PHP Developer</div>
+                        <div class="job-company">Freelance & Contract Work</div>
+                    </div>
+                    <div class="job-date">2017 - 2020</div>
+                </div>
+                <ul class="job-description">
+                    <li>Developed custom web applications for various industries</li>
+                    <li>Specialized in PHP/MySQL development with modern frameworks</li>
+                    <li>Implemented payment gateway integrations and security protocols</li>
+                    <li>Created responsive, multi-language user interfaces</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Key Projects -->
+        <div class="section">
+            <div class="section-title">Key Projects</div>
+            
+            <div class="project">
+                <div class="project-name">SecureBank Pro - Multi-Language Banking System</div>
+                <div class="project-tech">PHP 8.2+, MySQL, Bootstrap 5, 13 Languages</div>
+                <div class="project-desc">Complete banking platform with account management, transactions, admin console, and enterprise security features.</div>
+            </div>
+
+            <div class="project">
+                <div class="project-name">LoanFlow Enterprise - Professional Loan Management</div>
+                <div class="project-tech">PHP 8.2+, GDPR Compliance, 18 Languages</div>
+                <div class="project-desc">Comprehensive loan management system with document handling, approval workflows, and regulatory compliance.</div>
+            </div>
+
+            <div class="project">
+                <div class="project-name">TrackPro System - Courier Management Platform</div>
+                <div class="project-tech">PHP 8.2+, Real-time APIs, Bootstrap 5</div>
+                <div class="project-desc">Professional courier and freight management with real-time tracking, admin console, and customer portal.</div>
+            </div>
+
+            <div class="project">
+                <div class="project-name">MailFlow Enterprise - High-Volume Email Platform</div>
+                <div class="project-tech">PHP 8.1+, Redis, Load Balancing</div>
+                <div class="project-desc">Enterprise email delivery system processing 50M+ emails monthly with multi-SMTP management.</div>
+            </div>
+
+            <div class="project">
+                <div class="project-name">Sports Betting Analytics - AI-Powered Platform</div>
+                <div class="project-tech">PHP, Python, Sports APIs, Machine Learning</div>
+                <div class="project-desc">Advanced sports betting fixture management with scrambling algorithms and real-time analytics.</div>
+            </div>
+        </div>
+
+        <!-- Technical Skills -->
+        <div class="section">
+            <div class="section-title">Technical Skills</div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Backend Development</h4>
+                    <div class="skill-list">PHP 8.2+, Laravel, MySQL 8.0, RESTful APIs, Microservices, PDO, MVC Architecture</div>
+                </div>
+                <div class="skill-category">
+                    <h4>Frontend Development</h4>
+                    <div class="skill-list">JavaScript ES6+, Bootstrap 5, jQuery, Responsive Design, HTML5, CSS3</div>
+                </div>
+                <div class="skill-category">
+                    <h4>Database & Infrastructure</h4>
+                    <div class="skill-list">MySQL, Redis, Database Design, Query Optimization, Server Management</div>
+                </div>
+                <div class="skill-category">
+                    <h4>Security & Compliance</h4>
+                    <div class="skill-list">JWT Authentication, CSRF Protection, Encryption, GDPR Compliance, SQL Injection Prevention</div>
+                </div>
+                <div class="skill-category">
+                    <h4>Integration & APIs</h4>
+                    <div class="skill-list">Payment Gateways (Stripe, PayPal), SMS/Email APIs, WhatsApp Integration, Third-party APIs</div>
+                </div>
+                <div class="skill-category">
+                    <h4>Tools & Technologies</h4>
+                    <div class="skill-list">Git, GitHub, XAMPP, Linux, Apache, Nginx, Docker, Composer</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Languages & Localization -->
+        <div class="section">
+            <div class="section-title">Internationalization Expertise</div>
+            <p><strong>Multi-Language Systems:</strong> Extensive experience developing applications supporting 6-18 languages including English, Spanish, French, German, Italian, Portuguese, Dutch, Russian, Arabic, Chinese, Japanese, and more. Expertise in i18n implementation, localization workflows, and culturally-appropriate UI/UX design.</p>
+        </div>
+
+        <!-- Education & Certifications -->
+        <div class="section">
+            <div class="section-title">Education & Professional Development</div>
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Self-Taught Developer & Continuous Learning</div>
+                    </div>
+                    <div class="job-date">2017 - Present</div>
+                </div>
+                <ul class="job-description">
+                    <li>Advanced PHP and Laravel development through practical project experience</li>
+                    <li>Database design and optimization through enterprise-level implementations</li>
+                    <li>Security best practices through handling sensitive financial and personal data</li>
+                    <li>International business requirements through multi-language project delivery</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Additional Information -->
+        <div class="section">
+            <div class="section-title">Additional Information</div>
+            <ul>
+                <li><strong>Location:</strong> Lagos, Nigeria (Available for remote work globally)</li>
+                <li><strong>Work Authorization:</strong> Available for contract and full-time remote positions</li>
+                <li><strong>Portfolio:</strong> <a href="https://barba4real.github.io/dave-portfolio/">https://barba4real.github.io/dave-portfolio/</a></li>
+                <li><strong>GitHub:</strong> <a href="https://github.com/barba4real">https://github.com/barba4real</a> (10+ professional repositories)</li>
+                <li><strong>Languages:</strong> English (Fluent), Technical documentation in multiple languages</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dave Oluwafemi - Curriculum Vitae</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            line-height: 1.5; 
+            color: #2c3e50; 
+            background: white;
+            font-size: 11pt;
+        }
+        .container { 
+            max-width: 210mm; 
+            margin: 0 auto; 
+            padding: 15mm;
+            min-height: 297mm;
+        }
+        
+        /* Header Section */
+        .header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: flex-start;
+            margin-bottom: 20px; 
+            padding-bottom: 15px;
+            border-bottom: 3px solid #3498db;
+        }
+        .header-left { flex: 2; }
+        .header-right { 
+            flex: 1; 
+            text-align: right;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 10px;
+        }
+        
+        .name { 
+            font-size: 28pt; 
+            font-weight: bold; 
+            color: #2c3e50; 
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .title { 
+            font-size: 14pt; 
+            color: #3498db; 
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        .subtitle {
+            font-size: 10pt;
+            color: #7f8c8d;
+            margin-bottom: 15px;
+        }
+        
+        .contact-info { 
+            font-size: 9pt; 
+            color: #34495e;
+            line-height: 1.6;
+        }
+        .contact-info a { 
+            color: #3498db; 
+            text-decoration: none; 
+        }
+        .contact-info .icon {
+            display: inline-block;
+            width: 12px;
+            margin-right: 5px;
+        }
+        
+        .qr-codes {
+            display: flex;
+            gap: 8px;
+            margin-top: 10px;
+        }
+        .qr-code {
+            width: 40px;
+            height: 40px;
+            background: #ecf0f1;
+            border: 1px solid #bdc3c7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 8pt;
+            color: #7f8c8d;
+            text-align: center;
+            border-radius: 3px;
+        }
+        
+        /* Section Styling */
+        .section { 
+            margin-bottom: 18px; 
+            page-break-inside: avoid;
+        }
+        .section-title { 
+            font-size: 13pt; 
+            font-weight: bold; 
+            color: #2c3e50; 
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+            padding-bottom: 3px;
+            border-bottom: 1px solid #3498db;
+        }
+        
+        /* Professional Summary */
+        .summary {
+            background: #f8f9fa;
+            padding: 12px;
+            border-left: 4px solid #3498db;
+            font-size: 10pt;
+            text-align: justify;
+        }
+        
+        /* Experience */
+        .job { 
+            margin-bottom: 15px; 
+            page-break-inside: avoid;
+        }
+        .job-header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: flex-start;
+            margin-bottom: 5px; 
+        }
+        .job-left { flex: 2; }
+        .job-right { 
+            flex: 1; 
+            text-align: right;
+            font-size: 9pt;
+            color: #7f8c8d;
+        }
+        .job-title { 
+            font-weight: bold; 
+            font-size: 11pt; 
+            color: #2c3e50; 
+        }
+        .job-company { 
+            font-weight: 600; 
+            color: #3498db; 
+            font-size: 10pt;
+        }
+        .job-location {
+            font-size: 9pt;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+        .job-description { 
+            margin-left: 0; 
+            font-size: 9pt;
+            color: #34495e;
+        }
+        .job-description li { 
+            margin-bottom: 2px; 
+            list-style-type: none;
+            position: relative;
+            padding-left: 12px;
+        }
+        .job-description li:before {
+            content: "▸";
+            color: #3498db;
+            position: absolute;
+            left: 0;
+        }
+        
+        /* Skills Grid */
+        .skills-grid { 
+            display: grid; 
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 12px; 
+        }
+        .skill-category { 
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            border-left: 3px solid #3498db;
+        }
+        .skill-category h4 { 
+            color: #2c3e50; 
+            margin-bottom: 5px; 
+            font-size: 10pt;
+        }
+        .skill-list { 
+            font-size: 9pt; 
+            color: #34495e;
+            line-height: 1.4;
+        }
+        
+        /* Projects */
+        .project { 
+            margin-bottom: 12px; 
+            padding: 8px;
+            background: #f8f9fa;
+            border-radius: 5px;
+        }
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 3px;
+        }
+        .project-name { 
+            font-weight: bold; 
+            color: #2c3e50; 
+            font-size: 10pt;
+        }
+        .project-year {
+            font-size: 9pt;
+            color: #7f8c8d;
+        }
+        .project-tech { 
+            font-size: 8pt; 
+            color: #3498db; 
+            font-weight: 500;
+            margin-bottom: 3px;
+        }
+        .project-desc { 
+            font-size: 9pt; 
+            color: #34495e; 
+            line-height: 1.3;
+        }
+        
+        /* Education */
+        .education-item {
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .education-left { flex: 2; }
+        .education-right { 
+            flex: 1; 
+            text-align: right;
+            font-size: 9pt;
+            color: #7f8c8d;
+        }
+        .degree {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 10pt;
+        }
+        .institution {
+            color: #3498db;
+            font-size: 9pt;
+        }
+        
+        /* Languages */
+        .languages {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .language {
+            background: #ecf0f1;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 9pt;
+            color: #2c3e50;
+        }
+        
+        /* Print Optimization */
+        @media print {
+            body { font-size: 10pt; }
+            .container { 
+                padding: 10mm;
+                max-width: none;
+                margin: 0;
+            }
+            .section { margin-bottom: 15px; }
+            .qr-code { 
+                width: 35px; 
+                height: 35px; 
+                font-size: 7pt;
+            }
+        }
+        
+        @page {
+            size: A4;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-left">
+                <div class="name">Dave Oluwafemi</div>
+                <div class="title">Full Stack Developer & General Manager</div>
+                <div class="subtitle">PHP • Laravel • JavaScript • MySQL • Multi-Language Systems</div>
+                
+                <div class="contact-info">
+                    <div><span class="icon">📍</span> Lagos, Nigeria (Open to Remote Roles Globally)</div>
+                    <div><span class="icon">📧</span> <a href="mailto:daveoluwafemi6@gmail.com">daveoluwafemi6@gmail.com</a></div>
+                    <div><span class="icon">📱</span> <a href="https://wa.me/2348131165878">+234 813 116 5878</a></div>
+                    <div><span class="icon">💼</span> <a href="https://www.linkedin.com/in/dave-oluwafemi-53b716132/">LinkedIn Profile</a></div>
+                    <div><span class="icon">🌐</span> <a href="https://barba4real.github.io/dave-portfolio/">Portfolio Website</a></div>
+                    <div><span class="icon">👨‍💻</span> <a href="https://github.com/barba4real">GitHub Profile</a></div>
+                </div>
+            </div>
+            
+            <div class="header-right">
+                <div class="qr-codes">
+                    <div class="qr-code" title="Portfolio QR">🌐<br>Portfolio</div>
+                    <div class="qr-code" title="WhatsApp QR">📱<br>WhatsApp</div>
+                    <div class="qr-code" title="LinkedIn QR">💼<br>LinkedIn</div>
+                </div>
+                <div style="font-size: 8pt; color: #7f8c8d; margin-top: 5px;">
+                    Scan QR codes for quick access
+                </div>
+            </div>
+        </div>
+
+        <!-- Professional Summary -->
+        <div class="section">
+            <div class="section-title">Professional Summary</div>
+            <div class="summary">
+                Full Stack Developer with <strong>7+ years</strong> of hands-on experience building enterprise-grade web applications, financial platforms, e-commerce solutions, and multi-language business systems. <strong>General Manager</strong> at Endless Pro Solutions, leading development of advanced digital systems including micro-loan platforms, courier management systems, fintech dashboards, and international business websites supporting <strong>6-18 languages</strong> per project.
+                <br><br>
+                Specialized in <strong>PHP 8.2+, Laravel, MySQL</strong>, and modern web technologies. Proven expertise in delivering scalable, secure, and high-performance applications for banking, logistics, e-commerce, and enterprise infrastructure sectors. Strong background in <strong>API integrations, payment systems, real-time tracking,</strong> and <strong>GDPR-compliant</strong> solutions.
+            </div>
+        </div>
+
+        <!-- Core Skills -->
+        <div class="section">
+            <div class="section-title">Core Technical Skills</div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Backend Development</h4>
+                    <div class="skill-list">PHP 8.2+, Laravel, MySQL 8.0, RESTful APIs, Microservices, PDO, MVC Architecture, Server Management</div>
+                </div>
+                <div class="skill-category">
+                    <h4>Frontend Development</h4>
+                    <div class="skill-list">JavaScript ES6+, Bootstrap 5, jQuery, HTML5, CSS3, Responsive Design, UI/UX Implementation</div>
+                </div>
+                <div class="skill-category">
+                    <h4>Database & Infrastructure</h4>
+                    <div class="skill-list">MySQL, Redis, Database Design, Query Optimization, cPanel, Linux, Apache, Nginx</div>
+                </div>
+                <div class="skill-category">
+                    <h4>Security & Compliance</h4>
+                    <div class="skill-list">JWT Authentication, CSRF Protection, Encryption, GDPR Compliance, SQL Injection Prevention</div>
+                </div>
+                <div class="skill-category">
+                    <h4>Integration & APIs</h4>
+                    <div class="skill-list">Payment Gateways (Stripe, PayPal), SMS/Email APIs, WhatsApp Integration, Third-party APIs</div>
+                </div>
+                <div class="skill-category">
+                    <h4>Tools & Management</h4>
+                    <div class="skill-list">Git, GitHub, Docker, Composer, Project Management, SEO, Multi-language i18n</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Professional Experience -->
+        <div class="section">
+            <div class="section-title">Professional Experience</div>
+            
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-left">
+                        <div class="job-title">General Manager & Lead Full Stack Developer</div>
+                        <div class="job-company">Endless Pro Solutions</div>
+                        <div class="job-location">Lagos, Nigeria</div>
+                    </div>
+                    <div class="job-right">
+                        <strong>2020 – Present</strong><br>
+                        <em>4+ years</em>
+                    </div>
+                </div>
+                <ul class="job-description">
+                    <li>Lead development team in creating <strong>10+ enterprise web applications</strong> for international clients</li>
+                    <li>Architected and developed production systems supporting <strong>6-18 languages each</strong></li>
+                    <li>Built secure banking systems handling sensitive financial transactions with <strong>enterprise-grade security</strong></li>
+                    <li>Developed high-volume email platforms processing <strong>50M+ emails monthly</strong></li>
+                    <li>Created real-time tracking systems for logistics and courier operations</li>
+                    <li>Implemented <strong>GDPR-compliant</strong> loan management systems with document handling</li>
+                    <li>Managed full project lifecycle from requirements gathering to production deployment</li>
+                    <li>Integrated payment gateways, SMS/WhatsApp APIs, and third-party services</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-left">
+                        <div class="job-title">Senior PHP Developer & Technical Consultant</div>
+                        <div class="job-company">Freelance & Contract Work</div>
+                        <div class="job-location">Remote & Lagos, Nigeria</div>
+                    </div>
+                    <div class="job-right">
+                        <strong>2017 – 2020</strong><br>
+                        <em>3 years</em>
+                    </div>
+                </div>
+                <ul class="job-description">
+                    <li>Developed custom web applications for various industries using <strong>PHP/MySQL</strong></li>
+                    <li>Specialized in <strong>Laravel framework</strong> development with modern best practices</li>
+                    <li>Implemented secure payment gateway integrations and authentication systems</li>
+                    <li>Created responsive, multi-language user interfaces with <strong>Bootstrap</strong></li>
+                    <li>Provided technical consulting for database design and system architecture</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-left">
+                        <div class="job-title">Network Administrator & Web Developer</div>
+                        <div class="job-company">Various IT Companies</div>
+                        <div class="job-location">Lagos, Nigeria</div>
+                    </div>
+                    <div class="job-right">
+                        <strong>2006 – 2017</strong><br>
+                        <em>11 years</em>
+                    </div>
+                </div>
+                <ul class="job-description">
+                    <li>Managed network infrastructure and communication systems</li>
+                    <li>Developed early-stage websites and internal management tools</li>
+                    <li>Provided IT support, server management, and system optimization</li>
+                    <li>Built foundational skills in web development and database management</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Key Projects -->
+        <div class="section">
+            <div class="section-title">Key Project Portfolio</div>
+            
+            <div class="project">
+                <div class="project-header">
+                    <div class="project-name">SecureBank Pro - Multi-Language Banking System</div>
+                    <div class="project-year">2024</div>
+                </div>
+                <div class="project-tech">PHP 8.2+, MySQL, Bootstrap 5, 13 Languages, Enterprise Security</div>
+                <div class="project-desc">Complete banking platform with account management, transactions, admin console, and multi-language support for international deployment.</div>
+            </div>
+
+            <div class="project">
+                <div class="project-header">
+                    <div class="project-name">LoanFlow Enterprise - GDPR-Compliant Loan Management</div>
+                    <div class="project-year">2024</div>
+                </div>
+                <div class="project-tech">PHP 8.2+, GDPR Compliance, 18 Languages, Document Management</div>
+                <div class="project-desc">Professional loan management system with approval workflows, document handling, and regulatory compliance for European markets.</div>
+            </div>
+
+            <div class="project">
+                <div class="project-header">
+                    <div class="project-name">TrackPro System - Courier Management Platform</div>
+                    <div class="project-year">2023</div>
+                </div>
+                <div class="project-tech">PHP 8.2+, Real-time APIs, Bootstrap 5, GPS Integration</div>
+                <div class="project-desc">Professional courier and freight management with real-time tracking, admin console, customer portal, and route optimization.</div>
+            </div>
+
+            <div class="project">
+                <div class="project-header">
+                    <div class="project-name">MailFlow Enterprise - High-Volume Email Platform</div>
+                    <div class="project-year">2023</div>
+                </div>
+                <div class="project-tech">PHP 8.1+, Redis, Load Balancing, Multi-SMTP</div>
+                <div class="project-desc">Enterprise email delivery system processing 50M+ emails monthly with advanced queue management and delivery optimization.</div>
+            </div>
+
+            <div class="project">
+                <div class="project-header">
+                    <div class="project-name">Sports Betting Analytics - AI-Powered Platform</div>
+                    <div class="project-year">2024</div>
+                </div>
+                <div class="project-tech">PHP, Python, Sports APIs, Machine Learning, Real-time Analytics</div>
+                <div class="project-desc">Advanced sports betting fixture management with AI algorithms, real-time data processing, and predictive analytics.</div>
+            </div>
+        </div>
+
+        <!-- Education -->
+        <div class="section">
+            <div class="section-title">Education & Professional Development</div>
+            
+            <div class="education-item">
+                <div class="education-left">
+                    <div class="degree">OND - Electrical/Electronics Engineering</div>
+                    <div class="institution">Osun State College of Technology, Esa-Oke</div>
+                </div>
+                <div class="education-right">
+                    <strong>2003 – 2005</strong>
+                </div>
+            </div>
+
+            <div class="education-item">
+                <div class="education-left">
+                    <div class="degree">CPISM & DISM - Information Systems Management</div>
+                    <div class="institution">Aptech Worldwide</div>
+                </div>
+                <div class="education-right">
+                    <strong>2001 – 2003</strong>
+                </div>
+            </div>
+
+            <div class="education-item">
+                <div class="education-left">
+                    <div class="degree">Advanced PHP & Laravel Development</div>
+                    <div class="institution">Self-taught through practical project experience</div>
+                </div>
+                <div class="education-right">
+                    <strong>2017 – Present</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- Languages & Additional Information -->
+        <div class="section">
+            <div class="section-title">Languages & Additional Information</div>
+            
+            <div style="margin-bottom: 10px;">
+                <strong>Languages:</strong>
+                <div class="languages">
+                    <div class="language">English (Native)</div>
+                    <div class="language">Technical Documentation (Multiple Languages)</div>
+                </div>
+            </div>
+            
+            <div style="font-size: 9pt; color: #34495e;">
+                <strong>Work Authorization:</strong> Available for remote work globally<br>
+                <strong>Availability:</strong> Full-time, Contract, and Freelance positions<br>
+                <strong>Specialization:</strong> Multi-language systems (6-18 languages per project)<br>
+                <strong>Portfolio:</strong> 10+ professional repositories on GitHub<br>
+                <strong>References:</strong> Available upon request
+            </div>
+        </div>
+    </div>
+</body>
+</html>
