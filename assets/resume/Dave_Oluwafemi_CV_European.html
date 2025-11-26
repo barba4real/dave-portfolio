@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dave Oluwafemi - Curriculum Vitae</title>
-    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js"></script>
+
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { 
@@ -310,15 +310,15 @@
             <div class="header-right">
                 <div class="qr-codes">
                     <div class="qr-container">
-                        <img id="qr-portfolio" class="qr-code" alt="Portfolio QR">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=45x45&data=https%3A//barba4real.github.io/dave-portfolio/" class="qr-code" alt="Portfolio QR">
                         <div class="qr-label">Portfolio</div>
                     </div>
                     <div class="qr-container">
-                        <img id="qr-whatsapp" class="qr-code" alt="WhatsApp QR">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=45x45&data=https%3A//wa.me/2348131165878" class="qr-code" alt="WhatsApp QR">
                         <div class="qr-label">WhatsApp</div>
                     </div>
                     <div class="qr-container">
-                        <img id="qr-linkedin" class="qr-code" alt="LinkedIn QR">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=45x45&data=https%3A//www.linkedin.com/in/dave-oluwafemi-53b716132/" class="qr-code" alt="LinkedIn QR">
                         <div class="qr-label">LinkedIn</div>
                     </div>
                 </div>
@@ -545,18 +545,6 @@
             </div>
         </div>
     </div>
-    <script>
-        // Generate QR codes using online API
-        window.onload = function() {
-            // Portfolio QR Code
-            document.getElementById('qr-portfolio').src = 'https://api.qrserver.com/v1/create-qr-code/?size=45x45&data=' + encodeURIComponent('https://barba4real.github.io/dave-portfolio/');
-            
-            // WhatsApp QR Code
-            document.getElementById('qr-whatsapp').src = 'https://api.qrserver.com/v1/create-qr-code/?size=45x45&data=' + encodeURIComponent('https://wa.me/2348131165878');
-            
-            // LinkedIn QR Code
-            document.getElementById('qr-linkedin').src = 'https://api.qrserver.com/v1/create-qr-code/?size=45x45&data=' + encodeURIComponent('https://www.linkedin.com/in/dave-oluwafemi-53b716132/');
-        };
-    </script>
+
 </body>
 </html>
